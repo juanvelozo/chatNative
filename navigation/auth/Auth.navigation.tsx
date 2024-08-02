@@ -6,7 +6,7 @@ const { Navigator, Screen } = createNativeStackNavigator<AuthStackNavigator>()
 
 export function AuthNavigator() {
     return (
-        <Navigator initialRouteName={AuthStackRoutesEnum.Login}>
+        <Navigator initialRouteName={AuthStackRoutesEnum.Dashboard}>
             {Object.values(AuthStackRoutesEnum).map((route, index) => {
                 return (
                     <Screen
@@ -14,7 +14,7 @@ export function AuthNavigator() {
                         name={route}
                         component={AuthComponents[route]}
                         options={{
-                            headerShown: route !== AuthStackRoutesEnum.Login,
+                            headerShown: route !== AuthStackRoutesEnum.Dashboard,
                             animation: 'slide_from_left',
                         }}
                     />

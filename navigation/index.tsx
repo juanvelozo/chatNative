@@ -4,7 +4,8 @@ import {
 } from '@react-navigation/native'
 import { useRef } from 'react'
 import { RootStackNavigator } from './main/Main.types'
-import { MainNavigator } from './main/Main.navigation'
+// import { MainNavigator } from './main/Main.navigation'
+import { AuthNavigator } from './auth/Auth.navigation'
 
 export const AppNavigator = () => {
     // refs
@@ -17,7 +18,8 @@ export const AppNavigator = () => {
     return (
         <NavigationContainer ref={navigationRef}>
             {/* {isAuthenticated ? <MainNavigator /> : <AuthNavigator/>  */}
-            <MainNavigator /> 
+            {/* <MainNavigator />  */}
+            <AuthNavigator/> 
         </NavigationContainer>
     )
 }
