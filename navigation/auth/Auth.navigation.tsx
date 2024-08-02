@@ -1,7 +1,6 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { AuthComponents, AuthStackNavigator, AuthStackRoutesEnum } from './Auth.types'
 
-
 const { Navigator, Screen } = createNativeStackNavigator<AuthStackNavigator>()
 
 export function AuthNavigator() {
@@ -15,7 +14,10 @@ export function AuthNavigator() {
                         component={AuthComponents[route]}
                         options={{
                             headerShown: route !== AuthStackRoutesEnum.Dashboard,
-                            animation: 'slide_from_left',
+                            animation: 'slide_from_right',
+                            headerShadowVisible: false,
+                            headerTransparent:true,
+                            title: ""
                         }}
                     />
                 )
