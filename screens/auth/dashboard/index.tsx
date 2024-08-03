@@ -2,6 +2,7 @@ import { useNavigation } from '@react-navigation/native';
 import { Image } from 'react-native';
 import { Button, H1, Paragraph, YStack } from 'tamagui';
 import { authNavProp } from '../../../navigation/auth/Auth.types';
+import { Layout } from '../../../components/common/Layout';
 export const DashboardScreen = (): JSX.Element => {
   //constants
 
@@ -21,14 +22,10 @@ export const DashboardScreen = (): JSX.Element => {
   //render
 
   return (
-    <YStack
-      flex={1}
-      padding="$5"
-      jc="space-around"
-    >
+    <Layout justifyContent='space-around'>
       <Image
-        source={require('../../../assets/images/auth/dashboardIllustration.png')}
-        style={{ width: '100%' }}
+        source={require('../../../assets/images/illustrations/Dog call.png')}
+        style={{ width: '100%', height: 400 }}
       />
       <YStack>
         <H1 textAlign='center'>ChatNative!</H1>
@@ -44,7 +41,7 @@ export const DashboardScreen = (): JSX.Element => {
           Already have an account? Login!
         </Button>
       </YStack>
-    </YStack>
+    </Layout>
 
   );
 }
